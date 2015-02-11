@@ -1,0 +1,1 @@
+include ':ustwo-sample-wearable', ':ustwo-sample-common', ':ustwo-sample-companion'

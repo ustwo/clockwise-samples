@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '20.0.0'
+
+    defaultConfig {
+        applicationId 'com.ustwo.clockwise.sample.configurablewatchface'
+
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode + VERSION_CODE
+        versionName "" + VERSION_NAME + ""
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    wearApp project(':ustwo-sample-wearable')
+    compile project(':ustwo-sample-common')
+}
