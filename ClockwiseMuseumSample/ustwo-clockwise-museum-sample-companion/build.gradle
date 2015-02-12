@@ -2,11 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '20.0.0'
+    buildToolsVersion '21.1.2'
 
     defaultConfig {
         applicationId 'com.ustwo.clockwise.sample.museum'
-
         minSdkVersion 19
         targetSdkVersion 21
         versionCode + VERSION_CODE
@@ -17,9 +16,6 @@ android {
         debug {
             debuggable true
         }
-    }
-    lintOptions {
-        abortOnError false
     }
 }
 

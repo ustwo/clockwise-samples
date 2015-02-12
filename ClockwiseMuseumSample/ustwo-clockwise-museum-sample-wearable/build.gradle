@@ -2,24 +2,20 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion '20'
+    buildToolsVersion '21.1.2'
 
     defaultConfig {
         applicationId 'com.ustwo.clockwise.sample.museum'
         minSdkVersion 20
-        targetSdkVersion 20
+        targetSdkVersion 21
         versionCode + VERSION_CODE
-        versionName ""+VERSION_NAME+""
+        versionName "" + VERSION_NAME + ""
     }
 
     buildTypes {
         debug {
             debuggable true
         }
-    }
-
-    lintOptions {
-        abortOnError false
     }
 }
 
