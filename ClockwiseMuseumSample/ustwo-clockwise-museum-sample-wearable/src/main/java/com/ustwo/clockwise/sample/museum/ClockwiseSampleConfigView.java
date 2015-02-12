@@ -1,4 +1,4 @@
-package com.ustwo.clockwise.sample.configurablewatchface;
+package com.ustwo.clockwise.sample.museum;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ustwo.clockwise.sample.config.WearableConfigListener;
+import com.ustwo.clockwise.sample.museum.R;
 
 
 /**
@@ -39,14 +40,14 @@ public class ClockwiseSampleConfigView extends LinearLayout {
 
         // Set the current state.
         boolean lightThemeActive = PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(ClockwiseSampleConfigurableWatchFace.PREF_CLOCKWISE_SAMPLE_LIGHT_THEME, false);
+                .getBoolean(ClockwiseSampleMuseumWatchFace.PREF_CLOCKWISE_SAMPLE_LIGHT_THEME, false);
         themeCheckBox.setChecked(lightThemeActive);
 
         // Listen for toggles.
         themeCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mListener.onConfigCompleted(ClockwiseSampleConfigurableWatchFace.PREF_CLOCKWISE_SAMPLE_LIGHT_THEME, isChecked, false);
+                mListener.onConfigCompleted(ClockwiseSampleMuseumWatchFace.PREF_CLOCKWISE_SAMPLE_LIGHT_THEME, isChecked, false);
             }
         });
 

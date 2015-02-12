@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.ustwo.clockwise.sample.configurablewatchface.ClockwiseSampleConfigView
+    <com.ustwo.clockwise.sample.museum.ClockwiseSampleConfigView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -46,6 +46,6 @@
                 android:textSize="14sp"/>
         </LinearLayout>
 
-    </com.ustwo.clockwise.sample.configurablewatchface.ClockwiseSampleConfigView>
+    </com.ustwo.clockwise.sample.museum.ClockwiseSampleConfigView>
 
 </android.support.wearable.view.BoxInsetLayout>

@@ -1,4 +1,4 @@
-package com.ustwo.clockwise.sample.configurablewatchface;
+package com.ustwo.clockwise.sample.museum;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+
+import com.ustwo.clockwise.sample.museum.R;
 
 
 /**

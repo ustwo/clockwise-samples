@@ -1,4 +1,4 @@
-package com.ustwo.clockwise.sample.configurablewatchface;
+package com.ustwo.clockwise.sample.museum;
 
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -18,6 +18,7 @@ import com.ustwo.clockwise.WatchFaceTime;
 import com.ustwo.clockwise.WatchMode;
 import com.ustwo.clockwise.WatchShape;
 import com.ustwo.clockwise.sample.common.ConfigurableConnectedWatchFace;
+import com.ustwo.clockwise.sample.museum.R;
 import com.ustwo.clockwise.util.TimeUtil;
 
 import java.text.SimpleDateFormat;
@@ -29,7 +30,7 @@ import java.util.TimeZone;
  *
  * @author ustwo
  */
-public class ClockwiseSampleConfigurableWatchFace extends ConfigurableConnectedWatchFace {
+public class ClockwiseSampleMuseumWatchFace extends ConfigurableConnectedWatchFace {
 
     /**
      * Container class for design specifications

@@ -2,6 +2,6 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.ustwo.clockwise.sample.configurablewatchface.ClockwiseSampleWatchFacePreference
+    <com.ustwo.clockwise.sample.museum.ClockwiseSampleWatchFacePreference
         android:key="pref_clockwise_sample_light_theme" />
 </PreferenceScreen>
