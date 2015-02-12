@@ -5,7 +5,7 @@ android {
     buildToolsVersion '20.0.0'
 
     defaultConfig {
-        applicationId 'com.ustwo.clockwise.sample.configurablewatchface'
+        applicationId 'com.ustwo.clockwise.sample.museum'
 
         minSdkVersion 19
         targetSdkVersion 21
@@ -25,6 +25,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    wearApp project(':ustwo-sample-wearable')
-    compile project(':ustwo-sample-common')
+    compile project(':ustwo-clockwise-museum-sample-common')
+    wearApp project(':ustwo-clockwise-museum-sample-wearable')
 }

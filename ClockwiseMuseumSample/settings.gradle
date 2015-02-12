@@ -1,1 +1,1 @@
-include ':ustwo-sample-wearable', ':ustwo-sample-common', ':ustwo-sample-companion'
+include ':ustwo-clockwise-museum-sample-wearable', ':ustwo-clockwise-museum-sample-common', ':ustwo-clockwise-museum-sample-companion'
