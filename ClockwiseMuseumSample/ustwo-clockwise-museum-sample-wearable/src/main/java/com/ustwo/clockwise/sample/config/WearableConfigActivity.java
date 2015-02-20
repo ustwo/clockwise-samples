@@ -44,6 +44,9 @@ public class WearableConfigActivity extends Activity implements WearableConfigLi
 
     private static final String TAG = WearableConfigActivity.class.getSimpleName();
 
+    private static final String COMPONENT_NAME = "android.support.wearable.watchface.extra.WATCH_FACE_COMPONENT";
+    private static final String CLOCKWISE_SAMPLE_CONFIG = "clockwise_sample_config";
+
     private WearableAPIHelper mWearableAPIHelper;
 
     @Override
@@ -52,10 +55,9 @@ public class WearableConfigActivity extends Activity implements WearableConfigLi
 
         // Note that it is possible to load different resources by examining or using the
         // ComponentName -- it is the name of the watch face Service the user has requested to configure.
-        ComponentName componentName = getIntent().getParcelableExtra(
-                "android.support.wearable.watchface.extra.WATCH_FACE_COMPONENT");
+        ComponentName componentName = getIntent().getParcelableExtra(COMPONENT_NAME);
 
-        String resourceName = "clockwise_sample_config";
+        String resourceName = CLOCKWISE_SAMPLE_CONFIG;
         final int layoutId = getResources().getIdentifier(resourceName, "layout", componentName.getPackageName());
         if (layoutId <= 0) {
             Log.e(TAG, "Could not find resource id for: " + resourceName);

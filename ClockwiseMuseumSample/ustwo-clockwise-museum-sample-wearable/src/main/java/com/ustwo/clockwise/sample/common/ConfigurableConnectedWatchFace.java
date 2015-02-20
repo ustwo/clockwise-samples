@@ -52,8 +52,8 @@ public abstract class ConfigurableConnectedWatchFace extends ConnectedWatchFace 
      * Overriding classes should detect if the SharedPreference change is part of their configuration and update
      * accordingly. They should call {@link com.ustwo.clockwise.WatchFace#invalidate()} to redraw if required.
      *
-     * @param sharedPreferences
-     * @param key
+     * @param sharedPreferences SharedPreferences for watch face on wearable
+     * @param key               Key for updated shared preference
      */
     protected abstract void onWatchFaceConfigChanged(SharedPreferences sharedPreferences, String key);
 

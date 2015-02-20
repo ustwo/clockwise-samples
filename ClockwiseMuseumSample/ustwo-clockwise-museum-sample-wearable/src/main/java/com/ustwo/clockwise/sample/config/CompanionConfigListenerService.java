@@ -59,10 +59,11 @@ public class CompanionConfigListenerService extends WearableListenerService {
         String supportedPath = SharedPreferencesUtil.DATA_PATH_CONFIG_UPDATE_COMPANION;
 
         for (DataEvent event : events) {
-            String path = event.getDataItem().getUri().getPath();
-
-            if (supportedPath.equals(path)) {
-                updateSharedPreferences(DataMapItem.fromDataItem(event.getDataItem()).getDataMap());
+            if(event.getDataItem() != null && event.getDataItem().getUri() != null) {
+                String path = event.getDataItem().getUri().getPath();
+                if (supportedPath.equals(path)) {
+                    updateSharedPreferences(DataMapItem.fromDataItem(event.getDataItem()).getDataMap());
+                }
             }
         }
     }

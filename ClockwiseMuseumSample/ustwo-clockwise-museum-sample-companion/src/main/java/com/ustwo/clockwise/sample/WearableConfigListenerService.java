@@ -53,10 +53,12 @@ public class WearableConfigListenerService extends WearableListenerService  {
         String supportedPath = SharedPreferencesUtil.DATA_PATH_CONFIG_UPDATE_WEARABLE;
 
         for (DataEvent event : events) {
-            String path = event.getDataItem().getUri().getPath();
-            if (supportedPath.equals(path)) {
-                DataMap dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
-                updateSharedPreferences(dataMap);
+            if(event.getDataItem() != null && event.getDataItem().getUri() != null) {
+                String path = event.getDataItem().getUri().getPath();
+                if (supportedPath.equals(path)) {
+                    DataMap dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
+                    updateSharedPreferences(dataMap);
+                }
             }
         }
     }
@@ -65,7 +67,7 @@ public class WearableConfigListenerService extends WearableListenerService  {
      * Update the phone's copy of the wearable's shared preferences. These will be synced to companion preference set by
      * the {@link com.ustwo.clockwise.sample.CompanionConfigActivity} when it is created.
      *
-     * @param dataMap
+     * @param dataMap   DataMap consisting of watch face preferences on the wearable
      */
     private void updateSharedPreferences(DataMap dataMap) {
         DataMap prefsDataMap = dataMap.getDataMap(SharedPreferencesUtil.DATA_KEY_CONFIG_PREFS);

@@ -62,6 +62,8 @@ public class CompanionConfigActivity extends Activity implements SharedPreferenc
      * the wearable preferences to ensure the latest preferences are shown in the companion.
      */
     private static final String PREFS_COMPANION_CONFIG = "companion_config";
+    private static final String COMPONENT_NAME = "android.support.wearable.watchface.extra.WATCH_FACE_COMPONENT";
+    private static final String CONFIGURABLE_WATCHFACE_PREFERENCE_SCREEN = "configurable_watchface_preference_screen";
 
     private WearableAPIHelper mWearableAPIHelper;
 
@@ -96,12 +98,11 @@ public class CompanionConfigActivity extends Activity implements SharedPreferenc
     private boolean initPreferenceFragment() {
         boolean initialised = false;
 
-        ComponentName componentName = getIntent().getParcelableExtra(
-                "android.support.wearable.watchface.extra.WATCH_FACE_COMPONENT");
+        ComponentName componentName = getIntent().getParcelableExtra(COMPONENT_NAME);
 
         // Note that we can also determine the watch face for which the preference screen is invoked
         // by examining the intent -- we can then load a specific preference screen.
-        String resourceName = "configurable_watchface_preference_screen";
+        String resourceName = CONFIGURABLE_WATCHFACE_PREFERENCE_SCREEN;
 
         // The preference ID of the preference screen (in res/xml) we'd like to load
         final int prefId = getResources().getIdentifier(resourceName, "xml", componentName.getPackageName());
@@ -118,19 +119,6 @@ public class CompanionConfigActivity extends Activity implements SharedPreferenc
 
                     addPreferencesFromResource(prefId);
                 }
-
-                /*
-                @Override
-                public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-                    // Remove the default padding.
-                    View view = super.onCreateView(inflater, container, savedInstanceState);
-                    View listView = view.findViewById(android.R.id.list);
-                    if (listView != null) {
-                        listView.setPadding(0, 0, 0, 0);
-                    }
-                    return view;
-                }
-                */
             };
             getFragmentManager().beginTransaction().replace(android.R.id.content, fragment).commit();
 
@@ -189,8 +177,8 @@ public class CompanionConfigActivity extends Activity implements SharedPreferenc
     /**
      * Called when the user updates a preference in one of the configuration screens.
      *
-     * @param companionPrefs
-     * @param key
+     * @param companionPrefs    SharedPreferences for watch face on companion device
+     * @param key               Key for updated shared preference
      */
     @Override
     public void onSharedPreferenceChanged(SharedPreferences companionPrefs, String key) {
