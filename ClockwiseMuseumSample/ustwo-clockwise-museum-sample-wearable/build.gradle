@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        applicationId 'com.ustwo.clockwise.sample.museum'
+        minSdkVersion 20
+        targetSdkVersion 21
+        versionCode + VERSION_CODE
+        versionName "" + VERSION_NAME + ""
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.android.support:wearable:1.1.+'
+    compile 'com.ustwo.android:clockwise-wearable:1.0.1'
+    compile project(':ustwo-clockwise-museum-sample-common')
+}

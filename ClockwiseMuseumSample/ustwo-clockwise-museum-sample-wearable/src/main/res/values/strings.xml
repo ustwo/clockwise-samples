@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="clockwise_sample_name">Clockwise Museum</string>
+    <string name="clockwise_sample_config_title">Settings</string>
+    <string name="clockwise_sample_toggle_name">Light theme</string>
+</resources>

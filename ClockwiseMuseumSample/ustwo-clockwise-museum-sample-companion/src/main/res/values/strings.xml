@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Clockwise Museum Sample Watch Face</string>
+
+    <string name="sample_config_title">Clockwise Museum</string>
+    <string name="sample_config_light_theme">Light theme</string>
+    <string name="config_select_theme">Select theme</string>
+
+</resources>

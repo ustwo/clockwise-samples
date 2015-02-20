@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ustwo.clockwise.sample.museum"
+          android:versionCode="1">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Service for handling data and messages from the wearable.
+             Note, there can only be one Service for BIND_LISTENER. -->
+        <service
+            android:name="com.ustwo.clockwise.sample.WearableConfigListenerService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
+        <!-- Activity that receives all watch face configuration requests on the companion -->
+        <activity
+            android:name="com.ustwo.clockwise.sample.CompanionConfigActivity"
+            android:theme="@style/ConfigTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.ustwo.clockwise.sample.config"/>
+                <category android:name="com.google.android.wearable.watchface.category.COMPANION_CONFIGURATION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
