@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Config for Hud -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Watch face preview -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff5f5f5">
+        <ImageView
+            android:id="@+id/museum_config_imageview_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:background="@drawable/watch_preview_round"
+            android:layout_gravity="center_horizontal"/>
+    </FrameLayout>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="16.67dp"
+        android:textSize="14dp"
+        android:textColor="#ff999999"
+        android:background="#ffe9e9e9"
+        android:gravity="center_vertical"
+        android:fontFamily="@string/font_family_medium"
+        android:text="@string/config_select_theme"/>
+
+    <!-- Horizontal divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#ffd8d8d8"/>
+
+    <!-- Theme config container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16.67dp"
+        android:paddingRight="23.33dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:text="@string/sample_config_light_theme"/>
+        <Switch
+            android:id="@+id/museum_config_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
