@@ -136,8 +136,8 @@ public class ClockwiseSampleMuseumWatchFace extends ConfigurableConnectedWatchFa
      */
     private Paint mBitmapPaint = new Paint();
 
-    private Paint mTimeTextPaint = new Paint(); //WatchFaceTextPaint("sans-serif-light", Typeface.NORMAL, Paint.Align.CENTER);
-    private Paint mDateTextPaint = new Paint(); //WatchFaceTextPaint("sans-serif", Typeface.NORMAL, Paint.Align.CENTER);
+    private Paint mTimeTextPaint = new Paint();
+    private Paint mDateTextPaint = new Paint();
 
     private Paint mMinuteHandDotPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private Paint mHourHandDotPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
